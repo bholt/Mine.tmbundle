@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>isDisabled</key>
+	<true/>
+	<key>name</key>
+	<string>Wrap Indent</string>
+	<key>scope</key>
+	<string>*.*</string>
+	<key>settings</key>
+	<dict>
+		<key>indentedSoftWrap</key>
+		<dict>
+			<key>format</key>
+			<string>$0\t</string>
+			<key>match</key>
+			<string>^\s*</string>
+		</dict>
+		<key>softWrap</key>
+		<integer>1</integer>
+	</dict>
+	<key>uuid</key>
+	<string>67C9FC1B-CE72-48E2-875F-7B062FC6C765</string>
+</dict>
+</plist>

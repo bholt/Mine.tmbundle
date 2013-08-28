@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>isDisabled</key>
+	<false/>
+	<key>name</key>
+	<string>Raw block</string>
+	<key>scope</key>
+	<string>markup.raw</string>
+	<key>settings</key>
+	<dict>
+		<key>fontSize</key>
+		<string>1em</string>
+	</dict>
+	<key>uuid</key>
+	<string>BAA47804-EEA5-4D3D-8304-CD117526BD1B</string>
+</dict>
+</plist>

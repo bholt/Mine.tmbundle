@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -w
+require 'tempfile'
+
+fname = ENV['TM_FILEPATH']
+dir = File.dirname(fname)
+fbase = File.basename(fname)
+exe = fname.gsub(/.cpp/, '.exe')
+
+srcf = Tempfile.new([fbase,'.cpp'])
+sbase = File.basename(srcf.path)
+STDIN.each_line{|l|
+  break if l =~ %r{/////////////////////////////////////////////////////////////}
+  puts l
+  srcf.write(l)
+}
+srcf.close
+
+puts "/////////////////////////////////////////////////////////////"
+# o = `clang++ -std=c++11 -lglog #{fname} -o #{exe} 2&gt;&amp;1`
+`rm -f #{exe}`
+# o = `g++-mp-4.7 -std=c++11 -lglog -I/usr/local/include -I/opt/local/include #{srcf.path} -o #{exe} 2&gt;&amp;1`
+o = `cd #{dir}; make 2&gt;&amp;1`
+o.each_line{|l| puts "//〕#{l.gsub(/#{srcf.path}/,fbase)}"} if o.length &gt; 0
+# puts "/////////////////////////////////////////////////////////////"
+# require 'open3'
+# Open3.popen2e("GLOG_logtostderr=1 #{exe}") do |i,oe,w|
+#   oe.each_line{|l|
+#     if l =~ /([a-zA-Z0-9\._-]+:\d+\].*)/
+#       s = $~[1]
+#       s.gsub!(/#{sbase}/,fbase) if s
+#     else
+#       s = l
+#     end
+#     puts "//&gt; #{s}"
+#   }
+#   w.value # wait
+# end
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>name</key>
+	<string>Make Inline</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>uuid</key>
+	<string>36E23DE8-CF57-4453-8815-6271C0B2E77C</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

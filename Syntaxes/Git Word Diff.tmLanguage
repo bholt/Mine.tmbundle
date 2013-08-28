@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>src</string>
+	</array>
+	<key>firstLineMatch</key>
+	<string>^Git Word Diff</string>
+	<key>name</key>
+	<string>Git Word Diff</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>source.diff</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>{\+</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.hidden.gitdiff</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\+}</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.hidden.gitdiff</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>markup.inserted.gitdiff</string>
+			<key>patterns</key>
+			<array>
+				<dict/>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\[-</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.hidden.gitdiff</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>-\]</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.hidden.gitdiff</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>markup.deleted.gitdiff</string>
+			<key>patterns</key>
+			<array>
+				<dict/>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.gitdiff</string>
+	<key>uuid</key>
+	<string>84E4B984-6867-49B3-BF88-CA2F9DF8A72B</string>
+</dict>
+</plist>

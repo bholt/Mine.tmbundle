@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Hide Git Diff</string>
+	<key>scope</key>
+	<string>meta.hidden</string>
+	<key>settings</key>
+	<dict>
+		<key>fontSize</key>
+		<string>0.1em</string>
+	</dict>
+	<key>uuid</key>
+	<string>5EEDA2C2-D724-44A8-9BED-B13967B0B68A</string>
+</dict>
+</plist>

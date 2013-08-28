@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>#include &lt;glog/logging.h&gt;
+int main(int argc, char* argv[]) {
+  google::InitGoogleLogging(argv[0]);
+  $1
+  return 0;
+}
+</string>
+	<key>name</key>
+	<string>Glog Main</string>
+	<key>scope</key>
+	<string>source.linguist,source.c++</string>
+	<key>tabTrigger</key>
+	<string>main</string>
+	<key>uuid</key>
+	<string>6128EE1A-6C17-48D2-809B-E7D34FC2D5B7</string>
+</dict>
+</plist>
